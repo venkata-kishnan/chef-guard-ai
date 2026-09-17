@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChefGuard AI — Restaurant Food Quality & Kitchen Hygiene Inspection Suite</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10B981',
+                        accent: '#06B6D4',
+                        chefamber: '#F59E0B',
+                        cyberpurple: '#8B5CF6'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome & Chart.js CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- ========================================================================= -->
+    <!-- 1. FULL-SCREEN PROFESSIONAL RESTAURANT LOGIN & AUTHENTICATION PORTAL      -->
+    <!-- ========================================================================= -->
+    <div id="login-section" class="min-h-screen flex items-center justify-center p-4 sm:p-6 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-black relative overflow-hidden">
+        
+        <!-- Background Cyber Grid / Ambient Glow -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none"></div>
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            
+            <!-- Left Showcase Hero (7 cols) -->
+            <div class="lg:col-span-7 space-y-6">
+                
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    FDA &middot; FSSAI &middot; ISO 22000 &middot; HACCP Certified Core
+                </div>
+
+                <div class="space-y-2">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center shadow-xl shadow-emerald-500/30">
+                            <i class="fa-solid fa-utensils text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                                ChefGuard <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">AI</span>
+                            </h1>
+                            <p class="text-xs text-slate-400 font-mono">Restaurant Food Inspection & Kitchen Hygiene Terminal</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 max-w-xl leading-relaxed pt-2">
+                        Autonomous multi-spectral food quality verification for commercial kitchens, luxury dining, and food safety inspection. Instant culinary doneness grading, plating appeal scoring, and HACCP table clearance.
+                    </p>
+                </div>
+
+                <!-- Feature Highlights Matrix -->
+                <div class="grid grid-cols-2 gap-3 pt-2">
+                    <div class="bg-slate-900/80 border border-slate-800 p-3.5 rounded-xl space-y-1 backdrop-blur">
+                        <i class="fa-solid fa-pizza-slice text-amber-400 text-base"></i>
+                        <h4 class="text-xs font-bold text-slate-200">Culinary Doneness & Charring</h4>
+                        <p class="text-[11px] text-slate-400">Detects overcooked crusts, burnt acrylamide spots, and steak sear.</p>
+                    </div>
+                    <div class="bg-slate-900/80 border border-slate-800 p-3.5 rounded-xl space-y-1 backdrop-blur">
+                        <i class="fa-solid fa-wand-magic-sparkles text-emerald-400 text-base"></i>
+                        <h4 class="text-xs font-bold text-slate-200">Plating & Aesthetic Score</h4>
+                        <p class="text-[11px] text-slate-400">Evaluates color harmony, portion symmetry, and Michelin presentation.</p>
+                    </div>
+                    <div class="bg-slate-900/80 border border-slate-800 p-3.5 rounded-xl space-y-1 backdrop-blur">
+                        <i class="fa-solid fa-shield-virus text-sky-400 text-base"></i>
+                        <h4 class="text-xs font-bold text-slate-200">HACCP & Spoilage Isolation</h4>
+                        <p class="text-[11px] text-slate-400">Multi-spectral Laplacian gradient isolates wilted greens & bacterial rot.</p>
+                    </div>
+                    <div class="bg-slate-900/80 border border-slate-800 p-3.5 rounded-xl space-y-1 backdrop-blur">
+                        <i class="fa-solid fa-clipboard-check text-purple-400 text-base"></i>
+                        <h4 class="text-xs font-bold text-slate-200">Audit & Health Clearance</h4>
+                        <p class="text-[11px] text-slate-400">Generates certified PDF kitchen audit reports with signature blocks.</p>
+                    </div>
+                </div>
+
+                <!-- Live Kitchen Status Badge -->
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center justify-between text-xs">
+                    <div class="flex items-center gap-2 text-slate-400">
+                        <i class="fa-solid fa-fire-burner text-emerald-400"></i>
+                        <span>Kitchen Line: <strong class="text-slate-200">Bistro Royale — Main Line #1</strong></span>
+                    </div>
+                    <span class="text-emerald-400 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40">Terminal Active</span>
+                </div>
+
+            </div>
+
+            <!-- Right Login Card (5 cols) -->
+            <div class="lg:col-span-5">
+                <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur space-y-5">
+                    
+                    <div class="space-y-1">
+                        <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-lock text-emerald-400"></i> Inspector Sign In
+                        </h2>
+                        <p class="text-xs text-slate-400">Authenticate your restaurant terminal credentials</p>
+                    </div>
+
+                    <!-- Credential Form -->
+                    <form id="login-form" onsubmit="handleManualLogin(event)" class="space-y-3.5 text-xs">
+                        <div class="space-y-1">
+                            <label class="font-semibold text-slate-300">Inspector ID / Email:</label>
+                            <div class="relative">
+                                <i class="fa-solid fa-id-badge absolute left-3 top-3 text-slate-500"></i>
+                                <input type="text" id="login-username" value="chef.marco@bistroroyale.com" placeholder="inspector@kitchen.com" class="w-full pl-9 pr-3 py-2.5 bg-slate-950 border border-slate-700 rounded-xl text-slate-200 placeholder-slate-500 focus:ring-1 focus:ring-emerald-500 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="font-semibold text-slate-300">Security PIN / Password:</label>
+                            <div class="relative">
+                                <i class="fa-solid fa-key absolute left-3 top-3 text-slate-500"></i>
+                                <input type="password" id="login-password" value="••••••••" placeholder="Enter PIN" class="w-full pl-9 pr-3 py-2.5 bg-slate-950 border border-slate-700 rounded-xl text-slate-200 placeholder-slate-500 focus:ring-1 focus:ring-emerald-500 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full py-2.5 px-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white rounded-xl font-bold shadow-lg shadow-emerald-500/20 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-right-to-bracket"></i> Authenticate & Enter Dashboard
+                        </button>
+                    </form>
+
+                    <!-- Divider -->
+                    <div class="relative flex py-1 items-center">
+                        <div class="flex-grow border-t border-slate-800"></div>
+                        <span class="flex-shrink mx-3 text-[10px] text-slate-500 uppercase tracking-wider font-semibold">1-Click Quick Demo Sign-Ins</span>
+                        <div class="flex-grow border-t border-slate-800"></div>
+                    </div>
+
+                    <!-- 1-Click Role-Based Quick Sign-Ins (Perfect for Viva & Evaluator Demos) -->
+                    <div class="space-y-2">
+                        
+                        <button type="button" onclick="loginAsRole('chef')" class="w-full p-2.5 bg-slate-800/80 hover:bg-slate-750 border border-slate-700/80 rounded-xl transition flex items-center gap-3 text-left group">
+                            <div class="w-9 h-9 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 flex items-center justify-center text-sm group-hover:scale-105 transition">
+                                <i class="fa-solid fa-hat-chef"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-bold text-xs text-slate-200 group-hover:text-emerald-400 transition">Chef Marco Bellini</span>
+                                    <span class="text-[10px] text-amber-400 font-semibold bg-amber-950/60 px-1.5 py-0.5 rounded">Executive Chef</span>
+                                </div>
+                                <p class="text-[10px] text-slate-400">Plating director & doneness grading</p>
+                            </div>
+                        </button>
+
+                        <button type="button" onclick="loginAsRole('auditor')" class="w-full p-2.5 bg-slate-800/80 hover:bg-slate-750 border border-slate-700/80 rounded-xl transition flex items-center gap-3 text-left group">
+                            <div class="w-9 h-9 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-sm group-hover:scale-105 transition">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-bold text-xs text-slate-200 group-hover:text-emerald-400 transition">Dr. Sarah Chen</span>
+                                    <span class="text-[10px] text-emerald-400 font-semibold bg-emerald-950/60 px-1.5 py-0.5 rounded">Lead Auditor</span>
+                                </div>
+                                <p class="text-[10px] text-slate-400">FDA / FSSAI Certified Inspector #FSA-9042</p>
+                            </div>
+                        </button>
+
+                        <button type="button" onclick="loginAsRole('manager')" class="w-full p-2.5 bg-slate-800/80 hover:bg-slate-750 border border-slate-700/80 rounded-xl transition flex items-center gap-3 text-left group">
+                            <div class="w-9 h-9 rounded-lg bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-sm group-hover:scale-105 transition">
+                                <i class="fa-solid fa-clipboard-user"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-bold text-xs text-slate-200 group-hover:text-emerald-400 transition">David Vance</span>
+                                    <span class="text-[10px] text-cyan-400 font-semibold bg-cyan-950/60 px-1.5 py-0.5 rounded">Operations</span>
+                                </div>
+                                <p class="text-[10px] text-slate-400">HACCP hygiene & batch quality supervisor</p>
+                            </div>
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ========================================================================= -->
+    <!-- 2. MAIN RESTAURANT FOOD INSPECTION DASHBOARD (AUTHENTICATED)               -->
+    <!-- ========================================================================= -->
+    <div id="app-section" class="hidden">
+        
+        <!-- Top Authenticated Navigation Header -->
+        <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+                
+                <!-- Logo & Brand -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-500/20">
+                        <i class="fa-solid fa-utensils text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-bold text-lg tracking-tight text-white flex items-center gap-2">
+                            ChefGuard <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Omniverse Edition</span>
+                        </span>
+                        <p class="text-xs text-slate-400">Restaurant Food Quality & Kitchen Hygiene Suite</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Tabs & Active User Pill -->
+                <div class="flex items-center space-x-2">
+                    
+                    <nav class="flex items-center space-x-1 sm:space-x-1.5 bg-slate-800/80 p-1 rounded-xl border border-slate-700/60">
+                        <button onclick="switchTab('inspect')" id="tab-btn-inspect" class="tab-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all bg-emerald-500 text-white shadow">
+                            <i class="fa-solid fa-microscope mr-1.5"></i> Single Inspect
+                        </button>
+                        <button onclick="switchTab('batch')" id="tab-btn-batch" class="tab-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">
+                            <i class="fa-solid fa-boxes-stacked mr-1.5"></i> Batch Kitchen Lot
+                        </button>
+                        <button onclick="switchTab('analytics')" id="tab-btn-analytics" class="tab-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">
+                            <i class="fa-solid fa-chart-pie mr-1.5"></i> Hygiene Audit Logs
+                        </button>
+                    </nav>
+
+                    <!-- Viva / Exam Mode Button (100 Marks Defense) -->
+                    <button onclick="openVivaModal()" class="px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold bg-gradient-to-r from-amber-500/20 to-yellow-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30 transition flex items-center gap-1.5 shadow-sm">
+                        <i class="fa-solid fa-graduation-cap text-amber-400"></i> Viva / Exam Mode
+                    </button>
+
+                    <!-- Voice / Sound Toggle -->
+                    <button onclick="toggleAudioFeedback()" id="audio-toggle-btn" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-emerald-400 border border-slate-700 transition" title="Toggle Voice & Audio Feedback">
+                        <i id="audio-icon" class="fa-solid fa-volume-high text-emerald-400"></i>
+                    </button>
+
+                    <!-- Authenticated User Profile Pill & Logout -->
+                    <div class="flex items-center gap-2 bg-slate-800/80 pl-2 pr-1.5 py-1 rounded-xl border border-slate-700/80">
+                        <img id="header-user-avatar" src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=100&auto=format&fit=crop&q=80" alt="Avatar" class="w-6 h-6 rounded-full object-cover border border-emerald-500">
+                        <div class="hidden md:block text-left pr-2">
+                            <p id="header-user-name" class="text-xs font-bold text-slate-200 leading-tight">Chef Marco Bellini</p>
+                            <p id="header-user-role" class="text-[10px] text-emerald-400 leading-tight">Executive Head Chef</p>
+                        </div>
+                        <button onclick="logoutUser()" class="p-1.5 text-slate-400 hover:text-red-400 hover:bg-slate-700 rounded-lg transition" title="Logout from Terminal">
+                            <i class="fa-solid fa-right-from-bracket text-xs"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Container -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+            <!-- Top Status Bar -->
+            <div class="bg-gradient-to-r from-slate-900 via-slate-900 to-slate-850 border border-slate-800 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
+                <div class="flex items-center gap-3">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                    </span>
+                    <div>
+                        <p class="text-sm font-semibold text-slate-200" id="current-engine-label">Engine: Multi-Spectral Computer Vision (OpenCV + Metrology Core)</p>
+                        <p class="text-xs text-slate-400">Terminal: <span id="dashboard-kitchen-location" class="text-emerald-400 font-semibold">Bistro Royale — Main Kitchen Line #1</span> &middot; HACCP Critical Limits Monitored</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[11px] px-2.5 py-1 bg-slate-800 text-emerald-400 border border-emerald-500/30 rounded-lg font-mono" id="latency-hud">Latency: ~90ms</span>
+                    <button onclick="openSettingsModal()" class="text-xs px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-gear text-emerald-400"></i> Settings
+                    </button>
+                </div>
+            </div>
+
+            <!-- TAB 1: SINGLE INSPECTION -->
+            <section id="tab-inspect" class="tab-content space-y-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                    
+                    <!-- Left Input Panel (5 cols) -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h2 class="text-base font-bold text-white flex items-center gap-2">
+                                    <i class="fa-solid fa-camera-viewfinder text-emerald-400"></i> Dish / Food Input
+                                </h2>
+                                <select id="food-hint-select" class="bg-slate-800 text-xs border border-slate-700 rounded-lg px-2.5 py-1 text-slate-200 focus:ring-1 focus:ring-emerald-500 focus:outline-none">
+                                    <option value="auto">Auto-detect Culinary Dish</option>
+                                    <optgroup label="Prepared Restaurant Dishes">
+                                        <option value="pizza">Artisan Pizza</option>
+                                        <option value="salad">Chef's Garden Salad</option>
+                                        <option value="fried_chicken">Crispy Fried Chicken</option>
+                                        <option value="sushi_salmon">Salmon Sushi / Sashimi</option>
+                                        <option value="steak">Char-Grilled Steak</option>
+                                        <option value="bread">Artisan Bread & Bakery</option>
+                                    </optgroup>
+                                    <optgroup label="Kitchen Prep Produce">
+                                        <option value="apple">Apple (Kitchen Prep)</option>
+                                        <option value="banana">Banana (Bakery Prep)</option>
+                                        <option value="tomato">Tomato (Salad Prep)</option>
+                                        <option value="orange">Orange (Bar Prep)</option>
+                                        <option value="general">General Culinary Item</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <!-- Dropzone Area -->
+                            <div id="dropzone" class="border-2 border-dashed border-slate-700 hover:border-emerald-500/70 transition-all rounded-xl p-6 text-center cursor-pointer bg-slate-950/50 hover:bg-emerald-950/10 group relative">
+                                <input type="file" id="file-input" accept="image/*" class="hidden">
+                                <div id="dropzone-content" class="space-y-3">
+                                    <div class="w-14 h-14 mx-auto rounded-full bg-slate-800 group-hover:bg-emerald-500/20 text-slate-400 group-hover:text-emerald-400 flex items-center justify-center transition-all duration-300">
+                                        <i class="fa-solid fa-cloud-arrow-up text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-medium text-slate-200">Drag & drop dish photo, or <span class="text-emerald-400 underline">browse</span></p>
+                                        <p class="text-xs text-slate-500 mt-1">Plated dish snapshots, prep items, or batch trays</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Preview inside Dropzone -->
+                                <div id="file-preview-container" class="hidden relative">
+                                    <img id="preview-thumb" src="" alt="Preview" class="max-h-52 mx-auto rounded-lg shadow-md object-contain">
+                                    <button type="button" onclick="clearSelectedImage(event)" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-red-600/80 hover:bg-red-600 text-white flex items-center justify-center text-xs shadow transition">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Actions Bar: Live Camera & Inspect -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <button type="button" onclick="openCameraModal()" class="w-full py-2.5 px-3 bg-slate-800 hover:bg-slate-750 border border-slate-700 rounded-xl text-xs sm:text-sm font-medium text-slate-200 transition flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-camera text-sky-400"></i> Open Kitchen Cam
+                                </button>
+                                <button type="button" id="btn-run-inspection" onclick="executeInspection()" class="w-full py-2.5 px-3 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white rounded-xl text-xs sm:text-sm font-semibold shadow-lg shadow-emerald-500/25 transition flex items-center justify-center gap-2 disabled:opacity-50">
+                                    <i class="fa-solid fa-bolt"></i> Inspect Quality
+                                </button>
+                            </div>
+
+                            <!-- 1-Click Restaurant Test Dishes (Culinary Presets) -->
+                            <div class="pt-3 border-t border-slate-800 space-y-2">
+                                <div class="flex items-center justify-between text-xs text-slate-400">
+                                    <span><i class="fa-solid fa-utensils text-emerald-400 mr-1"></i> Restaurant Dish Presets (1-Click):</span>
+                                </div>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
+                                    <button onclick="loadPresetSample('fresh_pizza.jpg', 'pizza')" class="preset-pill px-2 py-1.5 text-[11px] rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-300 hover:text-emerald-400 transition text-left truncate">🍕 Fresh Pizza</button>
+                                    <button onclick="loadPresetSample('burnt_pizza.jpg', 'pizza')" class="preset-pill px-2 py-1.5 text-[11px] rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-300 hover:text-red-400 transition text-left truncate">🍕 Burnt Pizza</button>
+                                    <button onclick="loadPresetSample('fresh_salad.jpg', 'salad')" class="preset-pill px-2 py-1.5 text-[11px] rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-300 hover:text-emerald-400 transition text-left truncate">🥗 Crisp Salad</button>
+                                    <button onclick="loadPresetSample('wilted_salad.jpg', 'salad')" class="preset-pill px-2 py-1.5 text-[11px] rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-300 hover:text-red-400 transition text-left truncate">🥗 Wilted Salad</button>
+                                    <button onclick="loadPresetSample('crispy_chicken.jpg', 'fried_chicken')" class="preset-pill px-2 py-1.5 text-[11px] rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-300 hover:text-emerald-400 transition text-left truncate">🍗 Fried Chicken</button>
+                                    <button onclick="loadPresetSample('burnt_chicken.jpg', 'fried_chicken')" class="preset-pill px-2 py-1.5 text-[11px] rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-300 hover:text-red-400 transition text-left truncate">🍗 Burnt Chicken</button>
+                                    <button onclick="loadPresetSample('fresh_sushi.jpg', 'sushi_salmon')" class="preset-pill px-2 py-1.5 text-[11px] rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-300 hover:text-emerald-400 transition text-left truncate">🍣 Fresh Sushi</button>
+                                    <button onclick="loadPresetSample('stale_sushi.jpg', 'sushi_salmon')" class="preset-pill px-2 py-1.5 text-[11px] rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-300 hover:text-red-400 transition text-left truncate">🍣 Stale Sushi</button>
+                                    <button onclick="loadPresetSample('fresh_steak.jpg', 'steak')" class="preset-pill px-2 py-1.5 text-[11px] rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-300 hover:text-emerald-400 transition text-left truncate">🥩 Seared Steak</button>
+                                    <button onclick="loadPresetSample('fresh_apple.jpg', 'apple')" class="preset-pill px-2 py-1.5 text-[11px] rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-300 hover:text-emerald-400 transition text-left truncate">🍎 Fresh Apple</button>
+                                    <button onclick="loadPresetSample('bruised_apple.jpg', 'apple')" class="preset-pill px-2 py-1.5 text-[11px] rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-300 hover:text-amber-400 transition text-left truncate">🍎 Bruised Apple</button>
+                                    <button onclick="loadPresetSample('moldy_bread.jpg', 'bread')" class="preset-pill px-2 py-1.5 text-[11px] rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-300 hover:text-red-400 transition text-left truncate">🍞 Moldy Bread</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Results Panel (7 cols) -->
+                    <div class="lg:col-span-7 space-y-4">
+                        
+                        <!-- Empty State -->
+                        <div id="empty-state-panel" class="bg-slate-900 border border-slate-800 rounded-2xl p-12 text-center shadow-xl flex flex-col items-center justify-center min-h-[460px]">
+                            <div class="w-16 h-16 rounded-2xl bg-slate-800 text-slate-500 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-utensils text-3xl"></i>
+                            </div>
+                            <h3 class="text-base font-semibold text-slate-200">No Food Item Scanned Yet</h3>
+                            <p class="text-xs text-slate-400 max-w-sm mt-1">Upload a dish photo, turn on continuous kitchen camera scanning, or click any pre-loaded dish preset on the left to trigger real-time AI quality & doneness inspection.</p>
+                        </div>
+
+                        <!-- Loading State Spinner -->
+                        <div id="loading-state-panel" class="hidden bg-slate-900 border border-slate-800 rounded-2xl p-12 text-center shadow-xl flex flex-col items-center justify-center min-h-[460px]">
+                            <div class="relative w-16 h-16 mb-4">
+                                <div class="w-16 h-16 rounded-full border-4 border-slate-800 border-t-emerald-500 animate-spin"></div>
+                                <i class="fa-solid fa-fire-burner absolute inset-0 m-auto text-emerald-400 text-lg flex items-center justify-center"></i>
+                            </div>
+                            <h3 class="text-base font-semibold text-slate-100">Scanning Culinary Dish & Hygiene...</h3>
+                            <p class="text-xs text-slate-400 mt-1">Evaluating doneness maillard crust, plating aesthetic ratio, wilting gradients, and HACCP limits.</p>
+                        </div>
+
+                        <!-- Active Inspection Result Card -->
+                        <div id="results-panel" class="hidden space-y-5">
+                            
+                            <!-- Multi-Spectrum Visualizer & Split Comparison Slider -->
+                            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl space-y-3">
+                                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                                    <div class="flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                        <h3 class="text-xs font-bold text-white uppercase tracking-wider">Multi-Spectral Dish HUD & Slider</h3>
+                                    </div>
+                                    
+                                    <!-- Multi-Spectrum View Layer Switcher -->
+                                    <div class="flex items-center flex-wrap bg-slate-800/90 p-1 rounded-lg border border-slate-700/80 text-[11px] gap-1">
+                                        <button onclick="setSpectralLayer('annotated')" id="layer-btn-annotated" class="px-2 py-1 rounded font-medium bg-emerald-500 text-white transition">🎯 HUD Bounding</button>
+                                        <button onclick="setSpectralLayer('heatmap')" id="layer-btn-heatmap" class="px-2 py-1 rounded font-medium text-slate-400 hover:text-white transition">🌡️ Thermal Jet</button>
+                                        <button onclick="setSpectralLayer('laplacian')" id="layer-btn-laplacian" class="px-2 py-1 rounded font-medium text-slate-400 hover:text-white transition">🕸️ Crisp Texture</button>
+                                        <button onclick="setSpectralLayer('luminance')" id="layer-btn-luminance" class="px-2 py-1 rounded font-medium text-slate-400 hover:text-white transition">🌑 Charring Map</button>
+                                    </div>
+                                </div>
+
+                                <!-- Interactive Split Comparison Slider -->
+                                <div id="split-container" class="split-slider-container relative rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center min-h-[320px] max-h-[420px] border border-slate-800 cursor-crosshair">
+                                    <img id="split-img-original" src="" alt="Original Dish" class="max-h-[400px] w-auto object-contain select-none pointer-events-none">
+                                    
+                                    <div id="split-overlay" class="split-slider-overlay flex items-center justify-center">
+                                        <img id="split-img-spectral" src="" alt="Spectral Inspection" class="max-h-[400px] w-auto object-contain select-none pointer-events-none">
+                                    </div>
+
+                                    <div id="split-handle" class="split-slider-handle">
+                                        <div class="split-slider-knob">
+                                            <i class="fa-solid fa-arrows-left-right text-[10px]"></i>
+                                        </div>
+                                    </div>
+
+                                    <!-- HUD Badges -->
+                                    <div class="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur border border-slate-700/80 px-2.5 py-1 rounded-lg text-[11px] flex items-center gap-2 shadow-lg z-20 pointer-events-none">
+                                        <span class="text-slate-400">Plated Dish</span>
+                                        <span class="text-emerald-400 font-bold">&larr; Swipe &rarr;</span>
+                                        <span id="active-layer-name" class="text-slate-200">HUD Overlay</span>
+                                    </div>
+
+                                    <div class="absolute bottom-3 right-3 bg-slate-900/90 backdrop-blur border border-slate-700/80 px-2.5 py-1 rounded-lg text-[11px] flex items-center gap-2 shadow-lg z-20 pointer-events-none">
+                                        <span id="hud-defect-badge" class="text-amber-400 font-mono">0 Anomalies</span>
+                                    </div>
+
+                                    <div id="pixel-probe-tooltip" class="hidden absolute top-3 left-3 bg-slate-900/95 backdrop-blur border border-emerald-500/50 px-3 py-1.5 rounded-lg text-[11px] font-mono text-slate-200 shadow-xl z-20 pointer-events-none">
+                                        Probe: Tissue Intact
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 4-Pillar Restaurant Quality & Service Scorecard -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                                
+                                <!-- Card 1: Freshness / Doneness Gauge -->
+                                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3.5 shadow-xl flex flex-col items-center justify-center text-center">
+                                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Freshness / Doneness</span>
+                                    <div class="relative w-24 h-24 flex items-center justify-center">
+                                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                                            <path class="text-slate-800" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                            <path id="freshness-gauge-bar" class="text-emerald-500 transition-all duration-1000 ease-out" stroke-dasharray="90, 100" stroke-width="3.5" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        </svg>
+                                        <div class="absolute flex flex-col items-center">
+                                            <span id="freshness-score-val" class="text-xl font-black text-white">93.4%</span>
+                                        </div>
+                                    </div>
+                                    <span id="freshness-substatus" class="mt-1 text-xs font-semibold text-emerald-400">Optimal Bake</span>
+                                </div>
+
+                                <!-- Card 2: Table Service Clearance -->
+                                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3.5 shadow-xl flex flex-col justify-between">
+                                    <div>
+                                        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Service Clearance</span>
+                                        <div class="mt-1.5">
+                                            <span id="service-verdict-badge" class="px-2.5 py-1 rounded-lg text-xs font-black bg-emerald-500 text-white shadow block text-center">READY TO SERVE</span>
+                                        </div>
+                                        <p id="grade-desc" class="text-[11px] text-slate-300 mt-1.5 font-medium">Michelin / Premium Quality</p>
+                                    </div>
+                                    <div class="pt-2 border-t border-slate-800">
+                                        <p class="text-[10px] text-slate-400 uppercase font-semibold">HACCP Status:</p>
+                                        <p id="haccp-verdict-text" class="text-[11px] font-semibold text-emerald-400 truncate">CCP Passed &middot; Safe</p>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3: Plating & Visual Appeal -->
+                                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3.5 shadow-xl flex flex-col justify-between">
+                                    <div>
+                                        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Plating Appeal Score</span>
+                                        <div class="mt-1.5 flex items-baseline gap-1">
+                                            <span id="plating-score-val" class="text-2xl font-black text-amber-400">85.9%</span>
+                                            <span class="text-xs text-slate-400">/ 100</span>
+                                        </div>
+                                        <p class="text-[11px] text-slate-300 mt-1">Presentation & Portion Harmony</p>
+                                    </div>
+                                    <div class="pt-2 border-t border-slate-800">
+                                        <span id="metro-diameter" class="text-[11px] font-semibold text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded border border-sky-800/40">Caliber: 280 mm</span>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4: Service Life & Certificate -->
+                                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3.5 shadow-xl flex flex-col justify-between">
+                                    <div>
+                                        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Service Window</span>
+                                        <div class="mt-1.5 space-y-1 text-xs">
+                                            <div class="flex justify-between">
+                                                <span class="text-slate-400">Hold Window:</span>
+                                                <span id="remaining-hours-val" class="font-bold text-emerald-400">2.8 Hours</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span class="text-slate-400">Serving Temp:</span>
+                                                <span id="serving-temp-val" class="font-bold text-slate-200">65-72°C</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-2">
+                                        <button onclick="printInspectionCertificate()" class="w-full py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-[11px] font-medium border border-slate-700 transition flex items-center justify-center gap-1.5 shadow-sm">
+                                            <i class="fa-solid fa-file-pdf text-emerald-400"></i> Print Audit Slip
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Detailed Defect Breakdown & Kitchen Action Directives -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                
+                                <!-- Defect Breakdown -->
+                                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl space-y-3">
+                                    <h4 class="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
+                                        <i class="fa-solid fa-chart-simple text-emerald-400"></i> Surface Defect & Charring Analysis
+                                    </h4>
+                                    
+                                    <div class="space-y-2.5 text-xs">
+                                        <div>
+                                            <div class="flex justify-between mb-1">
+                                                <span class="text-slate-400">Over-Browning / Softening</span>
+                                                <span id="metric-bruise" class="font-mono text-slate-200">0.0%</span>
+                                            </div>
+                                            <div class="w-full bg-slate-800 rounded-full h-1.5">
+                                                <div id="bar-bruise" class="bg-amber-400 h-1.5 rounded-full" style="width: 0%"></div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="flex justify-between mb-1">
+                                                <span class="text-slate-400">Scorched Carbon / Dark Char</span>
+                                                <span id="metric-rot" class="font-mono text-slate-200">0.0%</span>
+                                            </div>
+                                            <div class="w-full bg-slate-800 rounded-full h-1.5">
+                                                <div id="bar-rot" class="bg-red-500 h-1.5 rounded-full" style="width: 0%"></div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="flex justify-between mb-1">
+                                                <span class="text-slate-400">Fungal / Microbiological Anomaly</span>
+                                                <span id="metric-mold" class="font-mono text-slate-200">0.0%</span>
+                                            </div>
+                                            <div class="w-full bg-slate-800 rounded-full h-1.5">
+                                                <div id="bar-mold" class="bg-fuchsia-500 h-1.5 rounded-full" style="width: 0%"></div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="flex justify-between mb-1">
+                                                <span class="text-slate-400">Plating Color Uniformity</span>
+                                                <span id="metric-uniformity" class="font-mono text-slate-200">95.0%</span>
+                                            </div>
+                                            <div class="w-full bg-slate-800 rounded-full h-1.5">
+                                                <div id="bar-uniformity" class="bg-emerald-400 h-1.5 rounded-full" style="width: 95%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="defects-tags-container" class="pt-2 border-t border-slate-800 flex flex-wrap gap-1"></div>
+                                </div>
+
+                                <!-- Kitchen Action Directives & HACCP Guidelines -->
+                                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl space-y-3">
+                                    <h4 class="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
+                                        <i class="fa-solid fa-fire-burner text-amber-400"></i> Kitchen Action Directives
+                                    </h4>
+
+                                    <div class="space-y-2 text-xs">
+                                        <div class="bg-slate-800/60 p-2.5 rounded-xl border border-slate-700/60">
+                                            <p class="font-semibold text-slate-300 flex items-center gap-1.5 mb-1">
+                                                <i class="fa-solid fa-chef-hat text-amber-400"></i> Line Chef Instructions:
+                                            </p>
+                                            <p id="kitchen-action-text" class="text-slate-400 leading-relaxed"></p>
+                                        </div>
+
+                                        <div class="bg-slate-800/60 p-2.5 rounded-xl border border-slate-700/60">
+                                            <p class="font-semibold text-slate-300 flex items-center gap-1.5 mb-1">
+                                                <i class="fa-solid fa-shield-virus text-emerald-400"></i> HACCP Hygiene Critical Limit:
+                                            </p>
+                                            <p id="haccp-standard-text" class="text-slate-400 leading-relaxed"></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- TAB 2: BATCH KITCHEN LOT -->
+            <section id="tab-batch" class="tab-content hidden space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-5">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                        <div>
+                            <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-boxes-stacked text-emerald-400"></i> Restaurant Batch & Banquet Quality Lot
+                            </h2>
+                            <p class="text-xs text-slate-400">Bulk dish inspection for banquets, buffet lines, and central prep kitchens.</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="file" id="batch-file-input" multiple accept="image/*" class="hidden">
+                            <button onclick="document.getElementById('batch-file-input').click()" class="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-white rounded-xl text-xs sm:text-sm font-semibold shadow transition flex items-center gap-2">
+                                <i class="fa-solid fa-folder-plus"></i> Select Batch Photos
+                            </button>
+                            <button onclick="exportBatchCsv()" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-750 text-slate-200 border border-slate-700 rounded-xl text-xs sm:text-sm font-medium transition flex items-center gap-1.5">
+                                <i class="fa-solid fa-file-csv text-emerald-400"></i> Export CSV
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Summary Cards -->
+                    <div id="batch-summary-cards" class="hidden grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-3 text-center">
+                            <span class="text-xs text-slate-400">Total Dishes Inspected</span>
+                            <p id="batch-total-count" class="text-xl font-black text-white mt-1">0</p>
+                        </div>
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-3 text-center">
+                            <span class="text-xs text-slate-400">Service Pass Rate</span>
+                            <p id="batch-pass-rate" class="text-xl font-black text-emerald-400 mt-1">0%</p>
+                        </div>
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-3 text-center">
+                            <span class="text-xs text-slate-400">Approved for Tables</span>
+                            <p id="batch-passed-count" class="text-xl font-black text-emerald-400 mt-1">0</p>
+                        </div>
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-3 text-center">
+                            <span class="text-xs text-slate-400">Re-fire / Culled</span>
+                            <p id="batch-rejected-count" class="text-xl font-black text-red-400 mt-1">0</p>
+                        </div>
+                    </div>
+
+                    <!-- Batch Table -->
+                    <div class="overflow-x-auto rounded-xl border border-slate-800">
+                        <table class="w-full text-left text-xs text-slate-300">
+                            <thead class="bg-slate-800/80 text-slate-400 uppercase font-semibold">
+                                <tr>
+                                    <th class="px-4 py-3">Item #</th>
+                                    <th class="px-4 py-3">Culinary Item</th>
+                                    <th class="px-4 py-3">Quality Score</th>
+                                    <th class="px-4 py-3">Defect %</th>
+                                    <th class="px-4 py-3">Service Clearance</th>
+                                    <th class="px-4 py-3">Plating Score</th>
+                                </tr>
+                            </thead>
+                            <tbody id="batch-table-body" class="divide-y divide-slate-800">
+                                <tr>
+                                    <td colspan="6" class="px-4 py-8 text-center text-slate-500">
+                                        No batch loaded. Click "Select Batch Photos" above to process inventory.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- TAB 3: HYGIENE AUDIT LOGS -->
+            <section id="tab-analytics" class="tab-content hidden space-y-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                    
+                    <!-- Chart 1: Grade Distribution -->
+                    <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
+                        <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-chart-pie text-emerald-400"></i> Culinary Grade Distribution
+                        </h3>
+                        <div class="h-64 flex items-center justify-center">
+                            <canvas id="gradeDistributionChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- History Table -->
+                    <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-clock-rotate-left text-sky-400"></i> Restaurant Inspection Audit Log
+                            </h3>
+                            <div class="flex items-center gap-2">
+                                <button onclick="exportBatchCsv()" class="text-xs px-2.5 py-1 text-emerald-400 hover:bg-emerald-950/40 rounded border border-emerald-800/50 transition">
+                                    <i class="fa-solid fa-download mr-1"></i> CSV
+                                </button>
+                                <button onclick="clearHistoryLog()" class="text-xs px-2.5 py-1 text-red-400 hover:bg-red-950/40 rounded border border-red-900/50 transition">
+                                    <i class="fa-solid fa-trash mr-1"></i> Clear
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="overflow-y-auto max-h-80 rounded-xl border border-slate-800">
+                            <table class="w-full text-left text-xs text-slate-300">
+                                <thead class="bg-slate-800/80 text-slate-400 uppercase font-semibold sticky top-0">
+                                    <tr>
+                                        <th class="px-3 py-2.5">Time</th>
+                                        <th class="px-3 py-2.5">Dish</th>
+                                        <th class="px-3 py-2.5">Freshness</th>
+                                        <th class="px-3 py-2.5">Plating</th>
+                                        <th class="px-3 py-2.5">Verdict</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="history-table-body" class="divide-y divide-slate-800">
+                                    <tr>
+                                        <td colspan="5" class="px-3 py-6 text-center text-slate-500">
+                                            No past inspections logged.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Camera Modal with Continuous Scanner Option -->
+    <div id="camera-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-xl w-full p-5 space-y-4 shadow-2xl">
+            <div class="flex items-center justify-between">
+                <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-camera text-sky-400"></i> Kitchen Optical Scanner
+                </h3>
+                <button onclick="closeCameraModal()" class="text-slate-400 hover:text-white text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="relative bg-black rounded-xl overflow-hidden aspect-video border border-slate-800 flex items-center justify-center">
+                <video id="webcam-video" autoplay playsinline class="w-full h-full object-cover"></video>
+                <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <div class="w-48 h-48 border-2 border-dashed border-emerald-400/70 rounded-full flex items-center justify-center animate-pulse">
+                        <span class="text-[10px] text-emerald-300 bg-black/60 px-2 py-0.5 rounded">Dish Target Ring</span>
+                    </div>
+                </div>
+                <div id="live-scanner-status" class="absolute top-2 left-2 bg-black/70 px-2 py-0.5 rounded text-[10px] font-mono text-emerald-400">
+                    Live Video Feed &middot; FPS: <span id="camera-fps">30</span>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-1">
+                <label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+                    <input type="checkbox" id="continuous-scan-check" class="rounded border-slate-700 text-emerald-500 focus:ring-0">
+                    <span>Continuous Auto-Inspect (Every 2.5s)</span>
+                </label>
+                <div class="flex gap-2">
+                    <button onclick="closeCameraModal()" class="px-3.5 py-1.5 bg-slate-800 hover:bg-slate-750 text-slate-300 rounded-xl text-xs font-medium">Cancel</button>
+                    <button onclick="captureCameraSnapshot()" class="px-4 py-1.5 bg-emerald-500 hover:bg-emerald-400 text-white rounded-xl text-xs font-semibold shadow flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-dot"></i> Snap & Inspect
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🎓 100-MARKS VIVA DEFENSE & PRESENTATION MODAL -->
+    <div id="viva-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-4xl w-full p-6 space-y-5 shadow-2xl max-h-[90vh] overflow-y-auto">
+            
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-white">Project Viva Defense & Academic Architecture Guide</h3>
+                        <p class="text-xs text-slate-400">Complete slides & formulas for 100/100 marks presentation to evaluators</p>
+                    </div>
+                </div>
+                <button onclick="closeVivaModal()" class="text-slate-400 hover:text-white text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Slide Navigation Pills -->
+            <div class="flex items-center space-x-1.5 overflow-x-auto pb-1 text-xs">
+                <button onclick="showVivaSlide(1)" id="viva-nav-1" class="px-3 py-1.5 rounded-lg bg-emerald-500 text-white font-medium">1. Abstract & Motivation</button>
+                <button onclick="showVivaSlide(2)" id="viva-nav-2" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 font-medium">2. End-to-End Pipeline</button>
+                <button onclick="showVivaSlide(3)" id="viva-nav-3" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 font-medium">3. Mathematical Formulations</button>
+                <button onclick="showVivaSlide(4)" id="viva-nav-4" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 font-medium">4. Sizing & Metrology</button>
+                <button onclick="showVivaSlide(5)" id="viva-nav-5" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 font-medium">5. Top 10 Viva Exam Q&A</button>
+            </div>
+
+            <!-- Slide 1 -->
+            <div id="viva-slide-1" class="viva-slide space-y-4 text-xs text-slate-300">
+                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/60 space-y-2">
+                    <h4 class="font-bold text-sm text-emerald-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-bullseye"></i> Problem Statement & Commercial Restaurant Impact
+                    </h4>
+                    <p class="leading-relaxed">
+                        In commercial restaurant kitchens and dining chains, food safety non-conformance, customer plate returns from poor cooking/burns, and raw ingredient spoilage cost billions annually. Human quality check in busy kitchens is subjective and prone to fatigue. ChefGuard AI establishes an autonomous optical gate ensuring zero defective dishes reach guests.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div id="viva-slide-2" class="viva-slide hidden space-y-3 text-xs text-slate-300">
+                <h4 class="font-bold text-sm text-emerald-400 flex items-center gap-1.5">
+                    <i class="fa-solid fa-diagram-project"></i> 5-Stage System Pipeline
+                </h4>
+                <div class="space-y-2.5">
+                    <div class="p-2.5 bg-slate-800/60 rounded-lg border border-slate-700">
+                        <span class="font-bold text-slate-200">Stage 1: Optical Acquisition:</span> Captures high-res plate image &rarr; Color normalization.
+                    </div>
+                    <div class="p-2.5 bg-slate-800/60 rounded-lg border border-slate-700">
+                        <span class="font-bold text-slate-200">Stage 2: Dynamic Corner Subtraction:</span> Samples 4 corners &rarr; Computes background color vector $\mathbf{C}_{bg}$ &rarr; Segments food from plate/counter.
+                    </div>
+                    <div class="p-2.5 bg-slate-800/60 rounded-lg border border-slate-700">
+                        <span class="font-bold text-slate-200">Stage 3: Multi-Spectral Defect & Doneness Extraction:</span> CIELAB $L^*$ luminance decay detects charring & rot; Discrete 2D Laplacian operator detects crisp texture vs wilted greens.
+                    </div>
+                    <div class="p-2.5 bg-slate-800/60 rounded-lg border border-slate-700">
+                        <span class="font-bold text-slate-200">Stage 4: Computer Vision Metrology & Sizing:</span> Diameter, volume, and portion sphericity.
+                    </div>
+                    <div class="p-2.5 bg-slate-800/60 rounded-lg border border-slate-700">
+                        <span class="font-bold text-slate-200">Stage 5: Culinary Verdict & HACCP Clearance:</span> Plating score, service status, and printable audit slips.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div id="viva-slide-3" class="viva-slide hidden space-y-3 text-xs text-slate-300">
+                <h4 class="font-bold text-sm text-emerald-400 flex items-center gap-1.5">
+                    <i class="fa-solid fa-square-root-variable"></i> Mathematical Formulations
+                </h4>
+                <div class="space-y-3">
+                    <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                        <span class="font-bold text-sky-400">1. Background Color Space Distance:</span>
+                        <p class="font-mono text-emerald-300 my-1 bg-slate-900/80 p-2 rounded">
+                            &Delta;E = &radic;[ (R - R_bg)&sup2; + (G - G_bg)&sup2; + (B - B_bg)&sup2; ]
+                        </p>
+                    </div>
+
+                    <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                        <span class="font-bold text-amber-400">2. Discrete Laplacian Spatial Texture Operator:</span>
+                        <p class="font-mono text-amber-300 my-1 bg-slate-900/80 p-2 rounded">
+                            &nabla;&sup2;I(x, y) = [&part;&sup2;I / &part;x&sup2;] + [&part;&sup2;I / &part;y&sup2;]
+                        </p>
+                    </div>
+
+                    <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                        <span class="font-bold text-fuchsia-400">3. Freshness & Doneness Score:</span>
+                        <p class="font-mono text-fuchsia-300 my-1 bg-slate-900/80 p-2 rounded">
+                            Score = max(5.0, min(99.0, 100 - 2.2*Defect% - Char_Penalty - Mold_Penalty - Roughness_Penalty))
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div id="viva-slide-4" class="viva-slide hidden space-y-3 text-xs text-slate-300">
+                <h4 class="font-bold text-sm text-emerald-400 flex items-center gap-1.5">
+                    <i class="fa-solid fa-ruler-combined"></i> Caliber Sizing & Metrology
+                </h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                        <span class="font-bold text-slate-200">Portion Circularity:</span>
+                        <p class="font-mono text-emerald-300 bg-slate-900 p-1.5 rounded text-[11px]">C = (4 * &pi; * Area) / (Perimeter&sup2;)</p>
+                    </div>
+                    <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                        <span class="font-bold text-slate-200">Volume Estimation:</span>
+                        <p class="font-mono text-sky-300 bg-slate-900 p-1.5 rounded text-[11px]">V = (4/3) * &pi; * a * b&sup2;</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div id="viva-slide-5" class="viva-slide hidden space-y-3 text-xs text-slate-300">
+                <h4 class="font-bold text-sm text-emerald-400 flex items-center gap-1.5">
+                    <i class="fa-solid fa-clipboard-question"></i> Top 10 Viva Exam Defense Q&A
+                </h4>
+                <div class="space-y-2 max-h-96 overflow-y-auto pr-1">
+                    <div class="p-2.5 bg-slate-800/60 rounded-lg border border-slate-700 space-y-1">
+                        <p class="font-bold text-amber-300">Q1: How does the system distinguish a golden-baked pizza crust from a burnt one?</p>
+                        <p class="text-slate-300"><strong>Answer:</strong> Golden crust has high saturation ($S > 110$) and medium lightness ($L \approx 130-180$). Burnt spots exhibit severe luminance drops ($L < 40$) and low chromaticity, triggering charring defect penalties.</p>
+                    </div>
+                    <div class="p-2.5 bg-slate-800/60 rounded-lg border border-slate-700 space-y-1">
+                        <p class="font-bold text-amber-300">Q2: How is leafy green salad wilting detected?</p>
+                        <p class="text-slate-300"><strong>Answer:</strong> Crisp lettuce exhibits high turgidity and uniform chlorophyll green hue. As leaves wilt, edge oxidation shifts hue towards brown/yellow and increases Laplacian edge roughness.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center pt-3 border-t border-slate-800 text-xs">
+                <span class="text-slate-500">ChefGuard AI &middot; Omniverse Restaurant Defense Guide</span>
+                <button onclick="closeVivaModal()" class="px-4 py-1.5 bg-emerald-500 hover:bg-emerald-400 text-white rounded-xl font-semibold shadow">Got It, Ready for Exam</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 space-y-5 shadow-2xl">
+            <div class="flex items-center justify-between">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-sliders text-emerald-400"></i> Terminal Configuration
+                </h3>
+                <button onclick="closeSettingsModal()" class="text-slate-400 hover:text-white text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="space-y-4 text-xs">
+                <div>
+                    <label class="block font-semibold text-slate-300 mb-1.5">Inspection Engine:</label>
+                    <div class="space-y-2">
+                        <label class="flex items-start gap-2.5 p-2.5 rounded-xl border border-slate-800 bg-slate-800/40 cursor-pointer hover:border-emerald-500/60 transition">
+                            <input type="radio" name="engine-choice" value="cv" checked class="mt-0.5 text-emerald-500 focus:ring-0">
+                            <div>
+                                <span class="font-bold text-slate-200">Local Multi-Spectral CV (OpenCV)</span>
+                                <p class="text-[11px] text-slate-400 mt-0.5">100% offline, ~90ms latency, zero API keys, multi-spectral colorimetry & metrology.</p>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-2.5 p-2.5 rounded-xl border border-slate-800 bg-slate-800/40 cursor-pointer hover:border-purple-500/60 transition">
+                            <input type="radio" name="engine-choice" value="gemini" class="mt-0.5 text-purple-500 focus:ring-0">
+                            <div>
+                                <span class="font-bold text-slate-200">Google Gemini 2.5 Flash Vision</span>
+                                <p class="text-[11px] text-slate-400 mt-0.5">Multimodal culinary disease pathology & biochemical degradation explanations.</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="gemini-key-container" class="hidden space-y-1.5">
+                    <label class="block font-semibold text-slate-300">Gemini API Key (Optional):</label>
+                    <input type="password" id="gemini-api-key-input" placeholder="AIzaSy..." class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-200 placeholder-slate-500 focus:ring-1 focus:ring-purple-500 focus:outline-none">
+                </div>
+            </div>
+
+            <div class="flex justify-end gap-2 pt-2 border-t border-slate-800">
+                <button onclick="closeSettingsModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-xs font-medium">Close</button>
+                <button onclick="saveSettings()" class="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-white rounded-xl text-xs font-semibold shadow">Save Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Canvas -->
+    <canvas id="hidden-snapshot-canvas" class="hidden"></canvas>
+
+    <!-- OFFICIAL RESTAURANT KITCHEN HYGIENE & SAFETY AUDIT CERTIFICATE -->
+    <div id="printable-certificate" class="hidden print:block bg-white text-black p-8 max-w-2xl mx-auto">
+        <div class="border-4 border-emerald-900 p-6 space-y-5">
+            <div class="flex justify-between items-center border-b-2 border-emerald-900 pb-3">
+                <div>
+                    <h1 class="text-xl font-black text-emerald-950 tracking-tight">RESTAURANT FOOD SAFETY & HYGIENE AUDIT SLIP</h1>
+                    <p class="text-xs text-gray-600 font-medium">ChefGuard AI &middot; Certified Kitchen Line Quality Assurance</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-xs font-bold text-gray-800" id="cert-id">TICKET-00000</p>
+                    <p class="text-xs text-gray-500" id="cert-date">2026-09-17</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 text-xs">
+                <div>
+                    <p class="text-gray-500 uppercase font-semibold">Culinary Item</p>
+                    <p class="font-bold text-base text-gray-900" id="cert-item-name">Artisan Pizza</p>
+                </div>
+                <div>
+                    <p class="text-gray-500 uppercase font-semibold">Service Clearance</p>
+                    <p class="font-black text-lg text-emerald-800" id="cert-grade">READY TO SERVE</p>
+                </div>
+                <div>
+                    <p class="text-gray-500 uppercase font-semibold">Quality & Doneness</p>
+                    <p class="font-bold text-sm" id="cert-freshness">93.4%</p>
+                </div>
+                <div>
+                    <p class="text-gray-500 uppercase font-semibold">Plating Appeal Score</p>
+                    <p class="font-bold text-sm" id="cert-plating">85.9%</p>
+                </div>
+                <div>
+                    <p class="text-gray-500 uppercase font-semibold">Caliber Sizing</p>
+                    <p class="font-bold text-sm" id="cert-caliber">280 mm &middot; Commercial</p>
+                </div>
+                <div>
+                    <p class="text-gray-500 uppercase font-semibold">Holding Window</p>
+                    <p class="font-bold text-sm" id="cert-holding">2.8 Hours @ 65°C</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-300 pt-3 text-xs space-y-1">
+                <p><strong>HACCP Safety Verdict:</strong> <span id="cert-haccp" class="font-semibold text-emerald-800">CCP PASSED</span></p>
+                <p><strong>Chef Directive:</strong> <span id="cert-directive">Proceed with table service.</span></p>
+            </div>
+
+            <div class="border-t-2 border-emerald-900 pt-4 flex justify-between items-center text-xs">
+                <div>
+                    <p class="text-[10px] text-gray-500">EXECUTIVE CHEF SIGNATURE</p>
+                    <p class="font-bold font-serif text-gray-800 mt-1">Chef Marco Bellini</p>
+                </div>
+                <div>
+                    <p class="text-[10px] text-gray-500">LEAD AUDITOR CERTIFICATION</p>
+                    <p class="font-bold font-serif text-gray-800 mt-1">Dr. Sarah Chen (#FSA-9042)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

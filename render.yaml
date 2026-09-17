@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: chefguard-ai
+    env: python
+    buildCommand: pip install -r requirements.txt && python generate_samples.py
+    startCommand: gunicorn app:app --workers 2 --threads 4 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9

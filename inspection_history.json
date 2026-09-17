@@ -1,0 +1,680 @@
+[
+  {
+    "engine": "Local Multi-Spectral Computer Vision (OpenCV)",
+    "item_name": "Artisan Pizza",
+    "item_key": "pizza",
+    "freshness_score": 5.0,
+    "defect_percentage": 26.23,
+    "defect_breakdown": {
+      "bruising_pct": 0.0,
+      "rot_spots_pct": 0.37,
+      "mold_pct": 25.85,
+      "surface_uniformity_pct": 70.0
+    },
+    "defects_detected": [
+      "Fungal Mold / Spores"
+    ],
+    "defect_count": 12,
+    "grade": "Rejected",
+    "grade_category": "Spoiled / Bio-Hazard",
+    "badge_color": "#EF4444",
+    "service_badge": "DISCARD & QUARANTINE",
+    "service_status": "CULL & RE-FIRE \u2014 Excessive Acrylamide Scorching or Stale Base",
+    "safety_status": "CULL & RE-FIRE \u2014 Excessive Acrylamide Scorching or Stale Base",
+    "pass_status": false,
+    "haccp_verdict": "CCP FAILED \u2014 Critical Hygiene Non-Conformance",
+    "haccp_standard": "CCP-1: Cooked core temperature must reach min 74\u00b0C (165\u00b0F) for foodborne pathogen inactivation.",
+    "plating_appeal_score": 10.0,
+    "remaining_service_hours": 0.1,
+    "optimal_service_temp": "65-72\u00b0C (150-160\u00b0F)",
+    "kitchen_action": "Oven stone calibrated at 450\u00b0C. Maintain 90-second bake window. Check cheese moisture separation.",
+    "size_class": "Commercial Portion",
+    "shelf_life_days": {
+      "room_temperature": 1,
+      "refrigerated": 3
+    },
+    "nutritional_status": {
+      "vitamin_c_retention_pct": 10.0,
+      "moisture_loss_pct": 34,
+      "ripeness_stage": "Culinary Prep Validated",
+      "ethylene_status": "N/A (Prepared Food)"
+    },
+    "metrology": {
+      "estimated_diameter_mm": 156.3,
+      "projected_area_cm2": 191.8,
+      "estimated_volume_cm3": 1998.5,
+      "circularity_index": 0.85,
+      "solidity_index": 0.95,
+      "form_status": "Uniform Symmetrical"
+    },
+    "storage_tips": "Oven stone calibrated at 450\u00b0C. Maintain 90-second bake window. Check cheese moisture separation.",
+    "safety_notes": "CCP-1: Cooked core temperature must reach min 74\u00b0C (165\u00b0F) for foodborne pathogen inactivation.",
+    "metrics": {
+      "food_coverage_pct": 100.0,
+      "resolution": "554x554",
+      "inference_time_ms": 180.7
+    },
+    "id": "INS-1789625398778",
+    "filename": "images.jpg",
+    "timestamp": "2026-09-17 11:39:58"
+  },
+  {
+    "engine": "Local Multi-Spectral Computer Vision (OpenCV)",
+    "item_name": "Artisan Pizza",
+    "item_key": "pizza",
+    "freshness_score": 93.4,
+    "defect_percentage": 0.0,
+    "defect_breakdown": {
+      "bruising_pct": 0.0,
+      "rot_spots_pct": 0.0,
+      "mold_pct": 0.0,
+      "surface_uniformity_pct": 67.0
+    },
+    "defects_detected": [
+      "No major surface defects"
+    ],
+    "defect_count": 0,
+    "grade": "Grade A",
+    "grade_category": "Michelin / Premium Quality",
+    "badge_color": "#10B981",
+    "service_badge": "READY TO SERVE",
+    "service_status": "APPROVED FOR GUEST SERVICE \u2014 Golden Melt & Crust Uniformity Verified",
+    "safety_status": "APPROVED FOR GUEST SERVICE \u2014 Golden Melt & Crust Uniformity Verified",
+    "pass_status": true,
+    "haccp_verdict": "CCP PASSED \u2014 Safe for Immediate Consumption",
+    "haccp_standard": "CCP-1: Cooked core temperature must reach min 74\u00b0C (165\u00b0F) for foodborne pathogen inactivation.",
+    "plating_appeal_score": 85.9,
+    "remaining_service_hours": 2.8,
+    "optimal_service_temp": "65-72\u00b0C (150-160\u00b0F)",
+    "kitchen_action": "Oven stone calibrated at 450\u00b0C. Maintain 90-second bake window. Check cheese moisture separation.",
+    "size_class": "Commercial Portion",
+    "shelf_life_days": {
+      "room_temperature": 1,
+      "refrigerated": 3
+    },
+    "nutritional_status": {
+      "vitamin_c_retention_pct": 84.1,
+      "moisture_loss_pct": 2,
+      "ripeness_stage": "Culinary Prep Validated",
+      "ethylene_status": "N/A (Prepared Food)"
+    },
+    "metrology": {
+      "estimated_diameter_mm": 98.4,
+      "projected_area_cm2": 75.8,
+      "estimated_volume_cm3": 493.2,
+      "circularity_index": 0.9,
+      "solidity_index": 1.0,
+      "form_status": "Uniform Symmetrical"
+    },
+    "storage_tips": "Oven stone calibrated at 450\u00b0C. Maintain 90-second bake window. Check cheese moisture separation.",
+    "safety_notes": "CCP-1: Cooked core temperature must reach min 74\u00b0C (165\u00b0F) for foodborne pathogen inactivation.",
+    "metrics": {
+      "food_coverage_pct": 48.5,
+      "resolution": "500x500",
+      "inference_time_ms": 134.3
+    },
+    "id": "INS-1789625376722",
+    "filename": "fresh_pizza.jpg",
+    "timestamp": "2026-09-17 11:39:36"
+  },
+  {
+    "engine": "Local Multi-Spectral Computer Vision (OpenCV)",
+    "item_name": "Artisan Pizza",
+    "item_key": "pizza",
+    "freshness_score": 5.0,
+    "defect_percentage": 23.14,
+    "defect_breakdown": {
+      "bruising_pct": 0.0,
+      "rot_spots_pct": 0.26,
+      "mold_pct": 22.87,
+      "surface_uniformity_pct": 72.0
+    },
+    "defects_detected": [
+      "Fungal Mold / Spores"
+    ],
+    "defect_count": 6,
+    "grade": "Rejected",
+    "grade_category": "Spoiled / Bio-Hazard",
+    "badge_color": "#EF4444",
+    "service_badge": "DISCARD & QUARANTINE",
+    "service_status": "CULL & RE-FIRE \u2014 Excessive Acrylamide Scorching or Stale Base",
+    "safety_status": "CULL & RE-FIRE \u2014 Excessive Acrylamide Scorching or Stale Base",
+    "pass_status": false,
+    "haccp_verdict": "CCP FAILED \u2014 Critical Hygiene Non-Conformance",
+    "haccp_standard": "CCP-1: Cooked core temperature must reach min 74\u00b0C (165\u00b0F) for foodborne pathogen inactivation.",
+    "plating_appeal_score": 10.0,
+    "remaining_service_hours": 0.1,
+    "optimal_service_temp": "65-72\u00b0C (150-160\u00b0F)",
+    "kitchen_action": "Oven stone calibrated at 450\u00b0C. Maintain 90-second bake window. Check cheese moisture separation.",
+    "size_class": "Commercial Portion",
+    "shelf_life_days": {
+      "room_temperature": 1,
+      "refrigerated": 3
+    },
+    "nutritional_status": {
+      "vitamin_c_retention_pct": 10.0,
+      "moisture_loss_pct": 33,
+      "ripeness_stage": "Culinary Prep Validated",
+      "ethylene_status": "N/A (Prepared Food)"
+    },
+    "metrology": {
+      "estimated_diameter_mm": 63.5,
+      "projected_area_cm2": 31.6,
+      "estimated_volume_cm3": 133.9,
+      "circularity_index": 0.85,
+      "solidity_index": 0.95,
+      "form_status": "Uniform Symmetrical"
+    },
+    "storage_tips": "Oven stone calibrated at 450\u00b0C. Maintain 90-second bake window. Check cheese moisture separation.",
+    "safety_notes": "CCP-1: Cooked core temperature must reach min 74\u00b0C (165\u00b0F) for foodborne pathogen inactivation.",
+    "metrics": {
+      "food_coverage_pct": 100.0,
+      "resolution": "225x225",
+      "inference_time_ms": 74.7
+    },
+    "id": "INS-1789625349219",
+    "filename": "images.jpg",
+    "timestamp": "2026-09-17 11:39:09"
+  },
+  {
+    "engine": "Local Multi-Spectral Computer Vision (OpenCV)",
+    "item_name": "Artisan Pizza",
+    "item_key": "pizza",
+    "freshness_score": 12.9,
+    "defect_percentage": 13.48,
+    "defect_breakdown": {
+      "bruising_pct": 0.95,
+      "rot_spots_pct": 0.32,
+      "mold_pct": 12.21,
+      "surface_uniformity_pct": 54.0
+    },
+    "defects_detected": [
+      "Fungal Mold / Spores"
+    ],
+    "defect_count": 9,
+    "grade": "Rejected",
+    "grade_category": "Spoiled / Bio-Hazard",
+    "badge_color": "#EF4444",
+    "service_badge": "DISCARD & QUARANTINE",
+    "service_status": "CULL & RE-FIRE \u2014 Excessive Acrylamide Scorching or Stale Base",
+    "safety_status": "CULL & RE-FIRE \u2014 Excessive Acrylamide Scorching or Stale Base",
+    "pass_status": false,
+    "haccp_verdict": "CCP FAILED \u2014 Critical Hygiene Non-Conformance",
+    "haccp_standard": "CCP-1: Cooked core temperature must reach min 74\u00b0C (165\u00b0F) for foodborne pathogen inactivation.",
+    "plating_appeal_score": 10.0,
+    "remaining_service_hours": 0.3,
+    "optimal_service_temp": "65-72\u00b0C (150-160\u00b0F)",
+    "kitchen_action": "Oven stone calibrated at 450\u00b0C. Maintain 90-second bake window. Check cheese moisture separation.",
+    "size_class": "Commercial Portion",
+    "shelf_life_days": {
+      "room_temperature": 1,
+      "refrigerated": 3
+    },
+    "nutritional_status": {
+      "vitamin_c_retention_pct": 11.6,
+      "moisture_loss_pct": 29,
+      "ripeness_stage": "Culinary Prep Validated",
+      "ethylene_status": "N/A (Prepared Food)"
+    },
+    "metrology": {
+      "estimated_diameter_mm": 126.1,
+      "projected_area_cm2": 124.9,
+      "estimated_volume_cm3": 1049.8,
+      "circularity_index": 0.85,
+      "solidity_index": 0.95,
+      "form_status": "Uniform Symmetrical"
+    },
+    "storage_tips": "Oven stone calibrated at 450\u00b0C. Maintain 90-second bake window. Check cheese moisture separation.",
+    "safety_notes": "CCP-1: Cooked core temperature must reach min 74\u00b0C (165\u00b0F) for foodborne pathogen inactivation.",
+    "metrics": {
+      "food_coverage_pct": 100.0,
+      "resolution": "447x447",
+      "inference_time_ms": 154.1
+    },
+    "id": "INS-1789625235021",
+    "filename": "images.jpg",
+    "timestamp": "2026-09-17 11:37:14"
+  },
+  {
+    "engine": "Local Multi-Spectral Computer Vision (OpenCV)",
+    "item_name": "Artisan Pizza",
+    "item_key": "pizza",
+    "freshness_score": 93.4,
+    "defect_percentage": 0.0,
+    "defect_breakdown": {
+      "bruising_pct": 0.0,
+      "rot_spots_pct": 0.0,
+      "mold_pct": 0.0,
+      "surface_uniformity_pct": 67.0
+    },
+    "defects_detected": [
+      "No major surface defects"
+    ],
+    "defect_count": 0,
+    "grade": "Grade A",
+    "grade_category": "Michelin / Premium Quality",
+    "badge_color": "#10B981",
+    "service_badge": "READY TO SERVE",
+    "service_status": "APPROVED FOR GUEST SERVICE \u2014 Golden Melt & Crust Uniformity Verified",
+    "safety_status": "APPROVED FOR GUEST SERVICE \u2014 Golden Melt & Crust Uniformity Verified",
+    "pass_status": true,
+    "haccp_verdict": "CCP PASSED \u2014 Safe for Immediate Consumption",
+    "haccp_standard": "CCP-1: Cooked core temperature must reach min 74\u00b0C (165\u00b0F) for foodborne pathogen inactivation.",
+    "plating_appeal_score": 85.9,
+    "remaining_service_hours": 2.8,
+    "optimal_service_temp": "65-72\u00b0C (150-160\u00b0F)",
+    "kitchen_action": "Oven stone calibrated at 450\u00b0C. Maintain 90-second bake window. Check cheese moisture separation.",
+    "size_class": "Commercial Portion",
+    "shelf_life_days": {
+      "room_temperature": 1,
+      "refrigerated": 3
+    },
+    "nutritional_status": {
+      "vitamin_c_retention_pct": 84.1,
+      "moisture_loss_pct": 2,
+      "ripeness_stage": "Culinary Prep Validated",
+      "ethylene_status": "N/A (Prepared Food)"
+    },
+    "metrology": {
+      "estimated_diameter_mm": 98.4,
+      "projected_area_cm2": 75.8,
+      "estimated_volume_cm3": 493.2,
+      "circularity_index": 0.9,
+      "solidity_index": 1.0,
+      "form_status": "Uniform Symmetrical"
+    },
+    "storage_tips": "Oven stone calibrated at 450\u00b0C. Maintain 90-second bake window. Check cheese moisture separation.",
+    "safety_notes": "CCP-1: Cooked core temperature must reach min 74\u00b0C (165\u00b0F) for foodborne pathogen inactivation.",
+    "metrics": {
+      "food_coverage_pct": 48.5,
+      "resolution": "500x500",
+      "inference_time_ms": 600.9
+    },
+    "id": "INS-1789625189156",
+    "filename": "fresh_pizza.jpg",
+    "timestamp": "2026-09-17 11:36:28"
+  },
+  {
+    "engine": "Local Multi-Spectral Computer Vision (OpenCV)",
+    "item_name": "Tomato",
+    "item_key": "tomato",
+    "freshness_score": 5.0,
+    "defect_percentage": 64.06,
+    "defect_breakdown": {
+      "bruising_pct": 16.89,
+      "rot_spots_pct": 1.96,
+      "mold_pct": 45.44,
+      "surface_uniformity_pct": 42.0
+    },
+    "defects_detected": [
+      "Impact Bruise / Blemish",
+      "Fungal Mold / Spores"
+    ],
+    "defect_count": 13,
+    "grade": "Rejected",
+    "grade_category": "Spoiled / Unfit for Consumption",
+    "badge_color": "#EF4444",
+    "safety_status": "High Biological Risk / Culled",
+    "pass_status": false,
+    "haccp_verdict": "CCP FAILED \u2014 Critical Limit Exceeded / Bio-Hazard",
+    "haccp_standard": "CCP-1: Skin integrity & Salmonella post-harvest entry. Reject cracked fruit with weeping moisture.",
+    "size_class": "Extra Large (6x6)",
+    "shelf_life_days": {
+      "room_temperature": 0,
+      "refrigerated": 0
+    },
+    "nutritional_status": {
+      "vitamin_c_retention_pct": 15.0,
+      "estimated_vitamin_c_mg": 2.1,
+      "moisture_loss_pct": 35.0,
+      "estimated_brix": 3.4,
+      "ripeness_stage": "Decomposed / Microbial Breakdown",
+      "ethylene_status": "Post-climacteric Decline"
+    },
+    "metrology": {
+      "estimated_diameter_mm": 257.8,
+      "projected_area_cm2": 249.6,
+      "estimated_volume_cm3": 14701.6,
+      "circularity_index": 0.6,
+      "solidity_index": 0.93,
+      "form_status": "Elongated Natural"
+    },
+    "storage_tips": "Store stem-side down at 12-15\u00b0C. Prolonged refrigeration below 10\u00b0C disrupts flavor volatiles (cis-3-hexenal).",
+    "safety_notes": "Dehydrated wrinkled skin is acceptable for stewing. Discard immediately if Botrytis cinerea or white mycelium is observed.",
+    "metrics": {
+      "food_coverage_pct": 87.7,
+      "resolution": "900x506",
+      "inference_time_ms": 390.7
+    },
+    "id": "INS-1789395317455",
+    "filename": "optical_capture.jpg",
+    "timestamp": "2026-09-14 19:45:17"
+  },
+  {
+    "engine": "Local Multi-Spectral Computer Vision (OpenCV)",
+    "item_name": "Tomato",
+    "item_key": "tomato",
+    "freshness_score": 5.0,
+    "defect_percentage": 64.06,
+    "defect_breakdown": {
+      "bruising_pct": 16.89,
+      "rot_spots_pct": 1.96,
+      "mold_pct": 45.44,
+      "surface_uniformity_pct": 42.0
+    },
+    "defects_detected": [
+      "Impact Bruise / Blemish",
+      "Fungal Mold / Spores"
+    ],
+    "defect_count": 13,
+    "grade": "Rejected",
+    "grade_category": "Spoiled / Unfit for Consumption",
+    "badge_color": "#EF4444",
+    "safety_status": "High Biological Risk / Culled",
+    "pass_status": false,
+    "haccp_verdict": "CCP FAILED \u2014 Critical Limit Exceeded / Bio-Hazard",
+    "haccp_standard": "CCP-1: Skin integrity & Salmonella post-harvest entry. Reject cracked fruit with weeping moisture.",
+    "size_class": "Extra Large (6x6)",
+    "shelf_life_days": {
+      "room_temperature": 0,
+      "refrigerated": 0
+    },
+    "nutritional_status": {
+      "vitamin_c_retention_pct": 15.0,
+      "estimated_vitamin_c_mg": 2.1,
+      "moisture_loss_pct": 35.0,
+      "estimated_brix": 3.4,
+      "ripeness_stage": "Decomposed / Microbial Breakdown",
+      "ethylene_status": "Post-climacteric Decline"
+    },
+    "metrology": {
+      "estimated_diameter_mm": 257.8,
+      "projected_area_cm2": 249.6,
+      "estimated_volume_cm3": 14701.6,
+      "circularity_index": 0.6,
+      "solidity_index": 0.93,
+      "form_status": "Elongated Natural"
+    },
+    "storage_tips": "Store stem-side down at 12-15\u00b0C. Prolonged refrigeration below 10\u00b0C disrupts flavor volatiles (cis-3-hexenal).",
+    "safety_notes": "Dehydrated wrinkled skin is acceptable for stewing. Discard immediately if Botrytis cinerea or white mycelium is observed.",
+    "metrics": {
+      "food_coverage_pct": 87.7,
+      "resolution": "900x506",
+      "inference_time_ms": 421.6
+    },
+    "id": "INS-1789395087822",
+    "filename": "optical_capture.jpg",
+    "timestamp": "2026-09-14 19:41:27"
+  },
+  {
+    "engine": "Local Multi-Spectral Computer Vision (OpenCV)",
+    "item_name": "Tomato",
+    "item_key": "tomato",
+    "freshness_score": 13.2,
+    "defect_percentage": 10.45,
+    "defect_breakdown": {
+      "bruising_pct": 0.0,
+      "rot_spots_pct": 5.86,
+      "mold_pct": 4.58,
+      "surface_uniformity_pct": 73.0
+    },
+    "defects_detected": [
+      "Necrosis / Rot Lesion"
+    ],
+    "defect_count": 1,
+    "grade": "Rejected",
+    "grade_category": "Spoiled / Unfit for Consumption",
+    "badge_color": "#EF4444",
+    "safety_status": "High Biological Risk / Culled",
+    "pass_status": false,
+    "haccp_verdict": "CCP FAILED \u2014 Critical Limit Exceeded / Bio-Hazard",
+    "haccp_standard": "CCP-1: Skin integrity & Salmonella post-harvest entry. Reject cracked fruit with weeping moisture.",
+    "size_class": "Extra Large (6x6)",
+    "shelf_life_days": {
+      "room_temperature": 1,
+      "refrigerated": 1
+    },
+    "nutritional_status": {
+      "vitamin_c_retention_pct": 24.7,
+      "estimated_vitamin_c_mg": 3.4,
+      "moisture_loss_pct": 32.5,
+      "estimated_brix": 3.4,
+      "ripeness_stage": "Decomposed / Microbial Breakdown",
+      "ethylene_status": "Post-climacteric Decline"
+    },
+    "metrology": {
+      "estimated_diameter_mm": 82.7,
+      "projected_area_cm2": 51.7,
+      "estimated_volume_cm3": 276.9,
+      "circularity_index": 0.9,
+      "solidity_index": 1.0,
+      "form_status": "Uniform Symmetrical"
+    },
+    "storage_tips": "Store stem-side down at 12-15\u00b0C. Prolonged refrigeration below 10\u00b0C disrupts flavor volatiles (cis-3-hexenal).",
+    "safety_notes": "Dehydrated wrinkled skin is acceptable for stewing. Discard immediately if Botrytis cinerea or white mycelium is observed.",
+    "metrics": {
+      "food_coverage_pct": 33.1,
+      "resolution": "500x500",
+      "inference_time_ms": 231.3
+    },
+    "id": "INS-1789395021594",
+    "filename": "moldy_tomato.jpg",
+    "timestamp": "2026-09-14 19:40:21"
+  },
+  {
+    "engine": "Local Multi-Spectral Computer Vision (OpenCV)",
+    "item_name": "Apple",
+    "item_key": "apple",
+    "freshness_score": 96.5,
+    "defect_percentage": 0.15,
+    "defect_breakdown": {
+      "bruising_pct": 0.0,
+      "rot_spots_pct": 0.0,
+      "mold_pct": 0.15,
+      "surface_uniformity_pct": 84.0
+    },
+    "defects_detected": [
+      "No major surface defects"
+    ],
+    "defect_count": 0,
+    "grade": "Grade A",
+    "grade_category": "Premium / Export Quality",
+    "badge_color": "#10B981",
+    "safety_status": "Excellent / Certified Safe",
+    "pass_status": true,
+    "haccp_verdict": "CCP PASSED \u2014 Within Acceptable Microbiological Limit",
+    "haccp_standard": "CCP-1: Patulin mycotoxin risk threshold is < 50 ug/kg. Reject fruit with blue mold or soft rot exceeding 10% surface area.",
+    "size_class": "Extra Large",
+    "shelf_life_days": {
+      "room_temperature": 7,
+      "refrigerated": 29
+    },
+    "nutritional_status": {
+      "vitamin_c_retention_pct": 97.0,
+      "estimated_vitamin_c_mg": 4.5,
+      "moisture_loss_pct": 1.3,
+      "estimated_brix": 13.5,
+      "ripeness_stage": "Optimal Commercial Ripeness",
+      "ethylene_status": "Basal / Pre-climacteric"
+    },
+    "metrology": {
+      "estimated_diameter_mm": 91.7,
+      "projected_area_cm2": 61.8,
+      "estimated_volume_cm3": 359.0,
+      "circularity_index": 0.86,
+      "solidity_index": 0.99,
+      "form_status": "Uniform Symmetrical"
+    },
+    "storage_tips": "Store in a perforated plastic bag in the crisper drawer (0-4\u00b0C, 90-95% RH). Keep away from ethylene-sensitive greens.",
+    "safety_notes": "Surface bruising can be mechanically trimmed; fungal core rot (Alternaria/Penicillium patulin) mandates complete disposal.",
+    "metrics": {
+      "food_coverage_pct": 39.6,
+      "resolution": "500x500",
+      "inference_time_ms": 333.9
+    },
+    "id": "INS-1789395007756",
+    "filename": "fresh_apple.jpg",
+    "timestamp": "2026-09-14 19:40:07"
+  },
+  {
+    "engine": "Local Multi-Spectral Computer Vision (OpenCV)",
+    "item_name": "Orange / Citrus",
+    "item_key": "orange",
+    "freshness_score": 98.8,
+    "defect_percentage": 0.0,
+    "defect_breakdown": {
+      "bruising_pct": 0.0,
+      "rot_spots_pct": 0.0,
+      "mold_pct": 0.0,
+      "surface_uniformity_pct": 94.0
+    },
+    "defects_detected": [
+      "No major surface defects"
+    ],
+    "defect_count": 0,
+    "grade": "Grade A",
+    "grade_category": "Premium / Export Quality",
+    "badge_color": "#10B981",
+    "safety_status": "Excellent / Certified Safe",
+    "pass_status": true,
+    "haccp_verdict": "CCP PASSED \u2014 Within Acceptable Microbiological Limit",
+    "haccp_standard": "CCP-3: Penicillium fungal spore spread. Discard immediately upon sporulation onset.",
+    "size_class": "Jumbo (Size 56)",
+    "shelf_life_days": {
+      "room_temperature": 10,
+      "refrigerated": 21
+    },
+    "nutritional_status": {
+      "vitamin_c_retention_pct": 99.0,
+      "estimated_vitamin_c_mg": 52.7,
+      "moisture_loss_pct": 1.0,
+      "estimated_brix": 11.5,
+      "ripeness_stage": "Optimal Commercial Ripeness",
+      "ethylene_status": "Basal / Pre-climacteric"
+    },
+    "metrology": {
+      "estimated_diameter_mm": 83.5,
+      "projected_area_cm2": 54.6,
+      "estimated_volume_cm3": 301.2,
+      "circularity_index": 0.9,
+      "solidity_index": 1.0,
+      "form_status": "Uniform Symmetrical"
+    },
+    "storage_tips": "Store in a well-ventilated crisper drawer at 4-7\u00b0C. Avoid sealed polythene bags to prevent moisture accumulation.",
+    "safety_notes": "Green/blue powdery sporulation (Penicillium digitatum/italicum) spreads via airborne conidia; isolate infected fruits.",
+    "metrics": {
+      "food_coverage_pct": 35.0,
+      "resolution": "500x500",
+      "inference_time_ms": 271.4
+    },
+    "id": "INS-1789383091519",
+    "filename": "camera_snapshot.jpg",
+    "timestamp": "2026-09-14 16:21:31"
+  },
+  {
+    "engine": "Local Computer Vision (OpenCV)",
+    "item_name": "Tomato",
+    "item_key": "tomato",
+    "freshness_score": 46.5,
+    "defect_percentage": 15.18,
+    "defect_breakdown": {
+      "bruising_pct": 12.63,
+      "rot_spots_pct": 2.48,
+      "mold_pct": 0.07,
+      "surface_uniformity_pct": 49.0
+    },
+    "defects_detected": [
+      "Surface Bruise / Blemish",
+      "Necrosis / Rot Patch"
+    ],
+    "grade": "Rejected",
+    "grade_category": "Spoiled / Unfit for Consumption",
+    "badge_color": "#EF4444",
+    "safety_status": "High Risk / Spoilage Detected",
+    "pass_status": false,
+    "shelf_life_days": {
+      "room_temperature": 2,
+      "refrigerated": 5
+    },
+    "storage_tips": "Store stem-side down at room temperature to preserve natural aroma and flavor compounds.",
+    "safety_notes": "Wrinkled skin indicates dehydration (great for sauces/cooking). Discard immediately if white/green mold or soft rot lesions appear.",
+    "defect_count": 14,
+    "metrics": {
+      "food_coverage_pct": 100.0,
+      "resolution": "332x234"
+    },
+    "id": "INS-1789381630024",
+    "filename": "OIP.webp",
+    "timestamp": "2026-09-14 15:57:09"
+  },
+  {
+    "engine": "Local Computer Vision (OpenCV)",
+    "item_name": "Tomato",
+    "item_key": "tomato",
+    "freshness_score": 59.1,
+    "defect_percentage": 5.63,
+    "defect_breakdown": {
+      "bruising_pct": 0.0,
+      "rot_spots_pct": 5.63,
+      "mold_pct": 0.0,
+      "surface_uniformity_pct": 70.0
+    },
+    "defects_detected": [
+      "Necrosis / Rot Patch"
+    ],
+    "grade": "Grade C",
+    "grade_category": "Processing / Cook Immediately",
+    "badge_color": "#F59E0B",
+    "safety_status": "Fair / Secondary Processing",
+    "pass_status": true,
+    "shelf_life_days": {
+      "room_temperature": 3,
+      "refrigerated": 7
+    },
+    "storage_tips": "Store stem-side down at room temperature to preserve natural aroma and flavor compounds.",
+    "safety_notes": "Wrinkled skin indicates dehydration (great for sauces/cooking). Discard immediately if white/green mold or soft rot lesions appear.",
+    "defect_count": 1,
+    "metrics": {
+      "food_coverage_pct": 33.1,
+      "resolution": "500x500"
+    },
+    "id": "INS-1789381570654",
+    "filename": "moldy_tomato.jpg",
+    "timestamp": "2026-09-14 15:56:10"
+  },
+  {
+    "engine": "Local Computer Vision (OpenCV)",
+    "item_name": "Apple",
+    "item_key": "apple",
+    "freshness_score": 85.2,
+    "defect_percentage": 1.78,
+    "defect_breakdown": {
+      "bruising_pct": 0.08,
+      "rot_spots_pct": 1.71,
+      "mold_pct": 0.0,
+      "surface_uniformity_pct": 80.0
+    },
+    "defects_detected": [
+      "Necrosis / Rot Patch"
+    ],
+    "grade": "Grade A",
+    "grade_category": "Premium / Export Quality",
+    "badge_color": "#10B981",
+    "safety_status": "Excellent",
+    "pass_status": true,
+    "shelf_life_days": {
+      "room_temperature": 6,
+      "refrigerated": 25
+    },
+    "storage_tips": "Store in a perforated plastic bag in the crisper drawer. Keep away from ethylene-sensitive produce.",
+    "safety_notes": "Surface bruising can be trimmed; fungal core rot or blue mold patulin requires discarding the entire fruit.",
+    "defect_count": 1,
+    "metrics": {
+      "food_coverage_pct": 39.6,
+      "resolution": "500x500"
+    },
+    "id": "INS-1789381265816",
+    "filename": "camera_snapshot.jpg",
+    "timestamp": "2026-09-14 15:51:05"
+  }
+]
